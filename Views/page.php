@@ -1,7 +1,9 @@
-<!-- Post Content -->
+<!-- Page Content -->
 
 <article>
 
-<?= $content;?>
+<?php if($title):?><h1 class="section-heading"><?= $title;?></h1><?php endif;?>
+
+<?= $text;?>
 
 </article>
