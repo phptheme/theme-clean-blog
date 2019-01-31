@@ -2,7 +2,7 @@
     "name": "phptheme/theme-clean-blog",
     "autoload": {
         "psr-4": {
-            "PHPTheme\\CleanBlogTheme\\": ""
+            "Theme\\CleanBlog\\": ""
         }
     }
 }

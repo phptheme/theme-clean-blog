@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPTheme\CleanBlogTheme;
+namespace Theme\CleanBlog;
 
 use PHPTheme;
 use PHPTheme\Widget;
