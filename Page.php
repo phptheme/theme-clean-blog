@@ -8,12 +8,15 @@ use PHPTheme\Widget;
 class Page extends Widget
 {
 
-	public $content;
+	public $text;
+
+    public $title;
 
 	public function render()
 	{
 		return PHPTheme::view('page', [
-			'content' => $this->content
+			'text' => $this->text,
+            'title' => $this->title
 		]);
 	}
 

@@ -14,9 +14,16 @@ class Posts extends Widget
 
 	public function render()
 	{
+        $button = $this->button;
+
+        if ($button)
+        {
+            $button['align'] = 'right';
+        }
+
 		return PHPTheme::view('posts', [
 			'items' => $this->items,
-			'button' => $this->button
+			'button' => $button
 		]);
 	}
 
