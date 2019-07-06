@@ -1,11 +1,8 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class NavigationItem extends Widget
+class NavigationItem extends \PhpTheme\Core\Widget
 {
 
 	public $url;
@@ -14,7 +11,7 @@ class NavigationItem extends Widget
 
 	public $options = [];
 
-	public function render()
+	public function run()
 	{
 		$options = $this->options;
 
@@ -22,7 +19,7 @@ class NavigationItem extends Widget
 
 		$options['href'] = $this->url;
 
-		return PHPTheme::view('navigation-item', [
+		return $this->render('navigation-item', [
 			'url' => $this->url,
 			'label' => $this->label,
 			'options' => $options 

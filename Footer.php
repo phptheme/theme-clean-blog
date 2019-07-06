@@ -1,22 +1,19 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class Footer extends Widget
+class Footer extends \PhpTheme\Core\Widget
 {
 
 	public $copyright = 'Copyright &copy; Your Website {year}';
 
 	public $buttons = [];
 
-	public function render()
+	public function run()
 	{
 		$copyright = strtr($this->copyright, ['{year}' => date('Y')]);
 
-		return PHPTheme::view('footer', [
+		return $this->render('footer', [
 			'copyright' => $copyright,
 			'buttons' => $this->buttons
 		]);

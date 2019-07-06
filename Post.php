@@ -1,23 +1,20 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class Post extends Widget
+class Post extends \PhpTheme\Core\Widget
 {
 
-	public $text;
+	public $content;
 
 	public $title;
 
 	public $created;
 
-	public function render()
+	public function run()
 	{
-		return PHPTheme::view('post', [
-			'text' => $this->text,
+		return $this->render('post', [
+			'content' => $this->content,
 			'title' => $this->title,
 			'created' => $this->created
 		]);

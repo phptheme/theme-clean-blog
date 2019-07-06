@@ -2,12 +2,14 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class Header extends \PhpTheme\Core\Widget
+class PostHeader extends \PhpTheme\Core\Widget
 {
 
 	public $title = 'Clean Blog';
 
 	public $description = 'A Blog Theme by Start Bootstrap';
+
+    public $created;
 
 	public $image;
 
@@ -17,13 +19,14 @@ class Header extends \PhpTheme\Core\Widget
 
         if (!$image)
         {
-            $image = $this->theme->baseUrl . '/img/home-bg.jpg';
+            $image = $this->theme->baseUrl . '/img/post-bg.jpg';
         }
 
-		return $this->render('header', [
+		return $this->render('post-header', [
 			'title' => $this->title,
 			'description' => $this->description,
-			'image' => $image
+			'image' => $image,
+            'created' => $this->created
 		]);
 	}
 

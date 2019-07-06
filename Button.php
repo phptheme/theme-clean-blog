@@ -1,11 +1,8 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class Button extends Widget
+class Button extends \PhpTheme\Core\Widget
 {
 
 	public $url = '#';
@@ -14,7 +11,7 @@ class Button extends Widget
 
     public $align = 'left';
 
-	public function render()
+	public function run()
 	{
         $alignClass = '';
 
@@ -23,7 +20,7 @@ class Button extends Widget
             $alignClass = ' float-right';
         }
 
-		return PHPTheme::view('button', [
+		return $this->render('button', [
 			'url' => $this->url,
 			'label' => $this->label,
             'alignClass' => $alignClass

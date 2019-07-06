@@ -1,22 +1,28 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class Navigation extends Widget
+class Navigation extends \PhpTheme\Core\Widget
 {
 
 	public $title;
 
 	public $items = [];
 
-	public function render()
+    public $homeUrl;
+
+    public $toggleNavigationLabel = 'Toggle navigation';
+
+    public $menuLabel = 'Menu';
+
+	public function run()
 	{
-		return PHPTheme::view('navigation', [
+		return $this->render('navigation', [
 			'items' => $this->items,
-			'title' => $this->title
+			'title' => $this->title,
+            'homeUrl' => $this->homeUrl,
+            'menuLabel' => $this->menuLabel,
+            'toggleNavigationLabel' => $this->toggleNavigationLabel
 		]);
 	}
 

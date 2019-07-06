@@ -1,11 +1,8 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class Layout extends Widget
+class Layout extends \PhpTheme\Core\Widget
 {
 	
 	public $content;
@@ -18,14 +15,25 @@ class Layout extends Widget
 
 	public $title = 'Clean Blog - Start Bootstrap Theme';
 
-	public function render()
+    public $lang = 'en';
+
+    public $head;
+
+    public $beginBody;
+
+    public $endBody;
+
+	public function run()
 	{
-		return PHPTheme::view('layout', [
+		return $this->render('layout', [
 			'content' => $this->content,
 			'header' => $this->header,
 			'navigation' => $this->navigation,
 			'footer' => $this->footer,
-			'title' => $this->title
+			'title' => $this->title,
+            'head' => $this->head,
+            'beginBody' => $this->beginBody,
+            'endBody' => $this->endBody
 		]);
 	}
 

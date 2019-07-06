@@ -1,29 +1,16 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class Posts extends Widget
+class Posts extends \PhpTheme\Core\Widget
 {
 
 	public $items = [];
-	
-	public $button;
 
-	public function render()
+	public function run()
 	{
-        $button = $this->button;
-
-        if ($button)
-        {
-            $button['align'] = 'right';
-        }
-
-		return PHPTheme::view('posts', [
-			'items' => $this->items,
-			'button' => $button
+		return $this->render('posts', [
+			'items' => $this->items
 		]);
 	}
 

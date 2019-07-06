@@ -1,11 +1,8 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class FooterButton extends Widget
+class FooterButton extends \PhpTheme\Core\Widget
 {
 
 	public $url;
@@ -14,7 +11,11 @@ class FooterButton extends Widget
 
 	public $options = [];
 
-	public function render()
+    public $tag = 'a';
+
+    public $label;
+
+	public function run()
 	{
 		$options = $this->options;
 
@@ -22,10 +23,16 @@ class FooterButton extends Widget
 
 		$options['target'] = '_blank';
 
-		return PHPTheme::view('footer-button', [
+        if ($this->label)
+        {
+            $options['title'] = $this->label;
+        }
+
+		return $this->render('footer-button', [
 			'url' => $this->url,
 			'icon' => $this->icon,
-			'options' => $options
+			'options' => $options,
+            'tag' => $this->tag
 		]);
 	}
 

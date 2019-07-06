@@ -1,14 +1,25 @@
-<form name="sentMessage" id="contactForm" novalidate action="<?= $url;?>" method="POST">
+<?php
 
-<?php foreach($fields as $field):?>
+use PhpTheme\Core\Html;
 
-<?= PHPTheme::widget('contactFormField', $field);?>
+echo Html::beginTag('form', $formOptions);
 
-<?php endforeach;?>
+?>
+
+<?= $content;?>
 
 <br>
+
+<?php if($message):?>
+
 <div id="success"><?= $message;?></div>
+
+<?php endif;?>
+
 <div class="form-group">
-<button type="submit" class="btn btn-primary" id="sendMessageButton"><?= $submit;?></button>
+
+<button type="submit" class="btn btn-primary" id="sendMessageButton"><?= $submitLabel;?></button>
+
 </div>
-</form>
+
+<?= Html::endTag('form');?>

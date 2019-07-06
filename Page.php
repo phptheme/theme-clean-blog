@@ -1,11 +1,8 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class Page extends Widget
+class Page extends \PhpTheme\Core\Widget
 {
 
 	public $text;
@@ -14,7 +11,7 @@ class Page extends Widget
 
 	public function render()
 	{
-		return PHPTheme::view('page', [
+		return $this->render('page', [
 			'text' => $this->text,
             'title' => $this->title
 		]);

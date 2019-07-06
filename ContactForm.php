@@ -1,25 +1,43 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
+use PhpTheme\Core\Html;
 
-class ContactForm extends Widget
+class ContactForm extends \PhpTheme\Core\Widget
 {
 
 	public $url;
 
-	public $submit = 'Send';
+	public $submitLabel = 'Send';
 
 	public $message;
 
-	public function render()
+    public $formOptions = [];
+
+    public $defaultFormOptions = [
+        'name' => 'sentMessage',
+        'id' => 'contactForm',
+        'novalidate' => 'novalidate',
+        'method' => 'POST'
+    ];
+
+    public $content;
+
+	public function run()
 	{
-		return PHPTheme::view('contact-form', [
+		return $this->render('contact-form', [
+            'content' => $this->content,
 			'url' => $this->url,
-			'submit' => $this->submit,
-			'message' => $this->message
+			'submitLabel' => $this->submitLabel,
+			'message' => $this->message,
+            'formOptions' => Html::mergeOptions(
+                $this->defaultFormOptions, 
+                $this->formOptions,
+                [
+                    'action' => $this->url
+                ]
+            )
 		]);
 	}
 

@@ -1,11 +1,8 @@
 <?php
 
-namespace Theme\CleanBlog;
+namespace PhpTheme\CleanBlogTheme;
 
-use PHPTheme;
-use PHPTheme\Widget;
-
-class PostsItem extends Widget
+class PostsItem extends \PhpTheme\Core\Widget
 {
 
 	public $created;
@@ -16,9 +13,9 @@ class PostsItem extends Widget
 
 	public $description;
 
-	public function render()
+	public function run()
 	{
-		return PHPTheme::view('posts-item', [
+		return $this->render('posts-item', [
 			'created' => $this->created,
 			'url' => $this->url,
 			'title' => $this->title,

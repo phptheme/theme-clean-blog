@@ -1,9 +1,15 @@
+<?php
+
+use PhpTheme\Core\Html;
+
+?>
+
 <li class="nav-item">
 
-	<?= PHPTheme::beginTag('a', $options);?>
+	<?= Html::beginTag('a', $options);?>
 	
-	<?= PHPTheme::escape($label);?>
+	<?= Html::escape($label);?>
 	
-	<?= PHPTheme::endTag('a');?>
+	<?= Html::endTag('a');?>
 
 </li>
