@@ -1,8 +1,11 @@
 {
     "name": "phptheme/theme-clean-blog",
+    "require": {
+        "phptheme/core": "dev-master" 
+    },
     "autoload": {
         "psr-4": {
-            "Theme\\CleanBlog\\": ""
+            "PhpTheme\\CleanBlogTheme\\": ""
         }
     }
 }
