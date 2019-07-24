@@ -14,47 +14,11 @@
 <link href="<?= $this->baseUrl;?>/css/clean-blog.min.css" rel="stylesheet">
 <!-- Bootstrap core JavaScript -->
 <script src="<?= $this->baseUrl;?>/vendor/jquery/jquery.min.js"></script>
-<style type="text/css">
-.page-item.active .page-link{
-	background-color: #212529;
-	border-color: #212529;
-}
-.page-link {
-	color: #212529;
-}
-.page-link:hover {
-	color: #212529;
-}
-a.page-link:focus {
-	box-shadow: none;
-}
-</style>
 <?= $this->head;?>
 </head>
 <body>
 <?= $this->beginBody;?>
-<?= $this->navigation($navigation);?>
-<?php
-
-if (is_array($header))
-{
-    echo $this->header($header);
-}
-else
-{
-    echo $header; // pre-rendered header
-}
-?>
-<!-- Main Content -->
-<div class="container">
-<div class="row">
-<div class="col-lg-8 col-md-10 mx-auto">
 <?= $content;?>
-</div>
-</div>
-</div>
-<hr>
-<?= $this->footer($footer);?>
 <script src="<?= $this->baseUrl;?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Custom scripts for this template -->
 <script src="<?= $this->baseUrl;?>/js/clean-blog.min.js"></script>
