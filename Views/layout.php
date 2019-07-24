@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $lang;?>">
+<html lang="<?= $this->lang;?>">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,6 @@
 <link href="<?= $this->baseUrl;?>/css/clean-blog.min.css" rel="stylesheet">
 <!-- Bootstrap core JavaScript -->
 <script src="<?= $this->baseUrl;?>/vendor/jquery/jquery.min.js"></script>
-<?= $head;?>
 <style type="text/css">
 .page-item.active .page-link{
 	background-color: #212529;
@@ -30,9 +29,10 @@ a.page-link:focus {
 	box-shadow: none;
 }
 </style>
+<?= $this->head;?>
 </head>
 <body>
-<?= $beginBody;?>
+<?= $this->beginBody;?>
 <?= $this->navigation($navigation);?>
 <?php
 
@@ -58,6 +58,6 @@ else
 <script src="<?= $this->baseUrl;?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Custom scripts for this template -->
 <script src="<?= $this->baseUrl;?>/js/clean-blog.min.js"></script>
-<?= $endBody;?>
+<?= $this->endBody;?>
 </body>
 </html>

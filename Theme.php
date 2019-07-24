@@ -15,13 +15,13 @@ class Theme extends \PhpTheme\Core\Theme
 
     const FOOTER_BUTTON = FooterButton::class;
 
-    //const FORM_FIELD = FormField::class; 
-
     const HEADER = Header::class;
 
     const POST_HEADER = PostHeader::class;
 
     const LAYOUT = Layout::class;
+
+    const MAIN_LAYOUT = MainLayout::class;
 
     const NAVIGATION = Navigation::class;
 
@@ -36,6 +36,8 @@ class Theme extends \PhpTheme\Core\Theme
     const POSTS_ITEM = PostsItem::class;
 
     protected $_layout;
+
+    public $lang;
 
     public function inputContainer(array $params = [])
     {
@@ -112,6 +114,11 @@ class Theme extends \PhpTheme\Core\Theme
     public function endLayout()
     {
         echo $this->endWidget($this->_layout);
+    }
+
+    public function mainLayout(array $params = [])
+    {
+        return $this->widget(static::MAIN_LAYOUT, $params);
     }
 
 }
