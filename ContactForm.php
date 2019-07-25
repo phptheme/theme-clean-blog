@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-use PhpTheme\Core\Html;
+use PhpTheme\Helpers\Html;
 
 class ContactForm extends \PhpTheme\Core\Widget
 {

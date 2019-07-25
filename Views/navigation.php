@@ -9,9 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
       	<?php foreach($items as $item):?>
-
       		<?= $this->navigationItem($item);?>
-      	
         <?php endforeach;?>
       </ul>
     </div>

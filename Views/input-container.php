@@ -1,6 +1,6 @@
 <?php
 
-use PhpTheme\Core\Html;
+use PhpTheme\Helpers\Html;
 
 ?>
 <div class="control-group">
