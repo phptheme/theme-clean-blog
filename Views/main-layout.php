@@ -1,4 +1,9 @@
-<?php $this->beginLayout(['title' => $title]);?>
+<?php $this->beginLayout([
+    'title' => $title,
+    'head' => $head,
+    'beginBody' => $beginBody,
+    'endBody' => $endBody
+]);?>
 
 <?= $this->navigation($navigation);?>
 
@@ -23,4 +28,5 @@ else
 </div>
 <hr>
 <?= $this->footer($footer);?>
+
 <?php $this->endLayout();?>

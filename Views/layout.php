@@ -15,13 +15,16 @@
 <!-- Bootstrap core JavaScript -->
 <script src="<?= $this->baseUrl;?>/vendor/jquery/jquery.min.js"></script>
 <?= $this->head;?>
+<?= $head;?>
 </head>
 <body>
 <?= $this->beginBody;?>
+<?= $beginBody;?>
 <?= $content;?>
 <script src="<?= $this->baseUrl;?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Custom scripts for this template -->
 <script src="<?= $this->baseUrl;?>/js/clean-blog.min.js"></script>
 <?= $this->endBody;?>
+<?= $endBody;?>
 </body>
 </html>
