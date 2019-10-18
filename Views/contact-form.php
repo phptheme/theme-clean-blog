@@ -1,8 +1,8 @@
 <?php
 
-use PhpTheme\Helpers\Html;
+use PhpTheme\Html\HtmlHelper;
 
-echo Html::beginTag('form', $formOptions);
+echo HtmlHelper::beginTag('form', $formOptions);
 
 ?>
 
@@ -22,4 +22,4 @@ echo Html::beginTag('form', $formOptions);
 
 </div>
 
-<?= Html::endTag('form');?>
+<?= HtmlHelper::endTag('form');?>

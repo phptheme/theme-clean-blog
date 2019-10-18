@@ -1,10 +1,10 @@
 <?php
 
-use PhpTheme\Helpers\Html;
+use PhpTheme\Html\HtmlHelper;
 
 ?>
 <li class="nav-item">
-	<?= Html::beginTag('a', $options);?>
-	<?= Html::escape($label);?>
-	<?= Html::endTag('a');?>
+	<?= HtmlHelper::beginTag('a', $options);?>
+	<?= HtmlHelper::escape($label);?>
+	<?= HtmlHelper::endTag('a');?>
 </li>

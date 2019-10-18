@@ -1,6 +1,6 @@
 <?php
 
-use PhpTheme\Helpers\Html;
+use PhpTheme\Html\HtmlHelper;
 
 ?>
 <div class="control-group">
@@ -11,7 +11,7 @@ use PhpTheme\Helpers\Html;
 
         if ($label)
         {
-            echo Html::tag('label', $label, $labelOptions);
+            echo HtmlHelper::tag('label', $label, $labelOptions);
         }
 
         echo $content;

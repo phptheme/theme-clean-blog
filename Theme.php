@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class Theme extends \PhpTheme\Core\Theme
+class Theme extends \PhpTheme\Bootstrap4\Theme
 {
 
     const INPUT_CONTAINER = InputContainer::class;
