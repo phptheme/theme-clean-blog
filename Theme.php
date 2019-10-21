@@ -23,9 +23,9 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     const MAIN_LAYOUT = MainLayout::class;
 
-    const NAVIGATION = Navigation::class;
+    const MAIN_MENU = MainMenu::class;
 
-    const NAVIGATION_ITEM = NavigationItem::class;
+    const MAIN_MENU_ITEM = MainMenuItem::class;
 
     const PAGE = Page::class;
 
@@ -74,14 +74,14 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
         return $this->widget(static::POST_HEADER, $params);
     }
 
-    public function navigation(array $params = [])
+    public function mainMenu(array $params = [])
     {
-        return $this->widget(static::NAVIGATION, $params);
+        return $this->widget(static::MAIN_MENU, $params);
     }
 
-    public function navigationItem(array $params = [])
+    public function mainMenuItem(array $params = [])
     {
-        return $this->widget(static::NAVIGATION_ITEM, $params);
+        return $this->widget(static::MAIN_MENU_ITEM, $params);
     }    
 
     public function page(array $params = [])
@@ -119,6 +119,11 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
     public function mainLayout(array $params = [])
     {
         return $this->widget(static::MAIN_LAYOUT, $params);
+    }
+ 
+    public function actionMenu(array $params = [])
+    {
+        return ''; // not implemented
     }
 
 }

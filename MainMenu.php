@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class Navigation extends \PhpTheme\Core\Widget
+class MainMenu extends \PhpTheme\Core\Widget
 {
 
 	public $title;
@@ -17,7 +17,7 @@ class Navigation extends \PhpTheme\Core\Widget
 
 	public function run()
 	{
-		return $this->render('navigation', [
+		return $this->render('main-menu', [
 			'items' => $this->items,
 			'title' => $this->title,
             'homeUrl' => $this->homeUrl,

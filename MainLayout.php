@@ -17,7 +17,7 @@ class MainLayout extends \PhpTheme\Core\Widget
     
     public $footer = [];
     
-    public $navigation = [];
+    public $mainMenu = [];
 
     public $title = 'Clean Blog - Start Bootstrap Theme';
 
@@ -26,7 +26,7 @@ class MainLayout extends \PhpTheme\Core\Widget
         return $this->render('main-layout', [
             'content' => $this->content,
             'header' => $this->header,
-            'navigation' => $this->navigation,
+            'mainMenu' => $this->mainMenu,
             'footer' => $this->footer,
             'title' => $this->title,
             'head' => $this->head,

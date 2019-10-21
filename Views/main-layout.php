@@ -5,7 +5,7 @@
     'endBody' => $endBody
 ]);?>
 
-<?= $this->navigation($navigation);?>
+<?= $this->mainMenu($mainMenu);?>
 
 <?php
 

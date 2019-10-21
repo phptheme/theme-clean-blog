@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class NavigationItem extends \PhpTheme\Core\Widget
+class MainMenuItem extends \PhpTheme\Core\Widget
 {
 
 	public $url;
@@ -19,7 +19,7 @@ class NavigationItem extends \PhpTheme\Core\Widget
 
 		$options['href'] = $this->url;
 
-		return $this->render('navigation-item', [
+		return $this->render('main-menu-item', [
 			'url' => $this->url,
 			'label' => $this->label,
 			'options' => $options 
