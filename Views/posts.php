@@ -1,5 +1,5 @@
 <?php foreach($items as $item):?>
 
-	<?= $this->postsItem($item);?>
+	<?= $this->theme->postsItem($item);?>
 
 <?php endforeach;?>

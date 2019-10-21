@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
       	<?php foreach($items as $item):?>
-      		<?= $this->mainMenuItem($item);?>
+      		<?= $this->theme->mainMenuItem($item);?>
         <?php endforeach;?>
       </ul>
     </div>

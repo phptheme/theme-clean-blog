@@ -7,7 +7,7 @@
 
           <?php foreach($buttons as $button):?>
 
-          	<?= $this->footerButton($button);?>
+          	<?= $this->theme->footerButton($button);?>
 
           <?php endforeach;?>
 

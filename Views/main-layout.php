@@ -1,17 +1,14 @@
-<?php $this->beginLayout([
-    'title' => $title,
-    'head' => $head,
-    'beginBody' => $beginBody,
-    'endBody' => $endBody
+<?php $this->theme->beginLayout([
+    'title' => $title
 ]);?>
 
-<?= $this->mainMenu($mainMenu);?>
+<?= $this->theme->mainMenu($mainMenu);?>
 
 <?php
 
 if (is_array($header))
 {
-    echo $this->header($header);
+    echo $this->theme->header($header);
 }
 else
 {
@@ -27,6 +24,6 @@ else
     </div>
 </div>
 <hr>
-<?= $this->footer($footer);?>
+<?= $this->theme->footer($footer);?>
 
-<?php $this->endLayout();?>
+<?php $this->theme->endLayout();?>

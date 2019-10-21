@@ -4,12 +4,6 @@ namespace PhpTheme\CleanBlogTheme;
 
 class MainLayout extends \PhpTheme\Core\Widget
 {
-
-    public $head;
-
-    public $beginBody;
-
-    public $endBody;
     
     public $content;
     
@@ -28,10 +22,7 @@ class MainLayout extends \PhpTheme\Core\Widget
             'header' => $this->header,
             'mainMenu' => $this->mainMenu,
             'footer' => $this->footer,
-            'title' => $this->title,
-            'head' => $this->head,
-            'beginBody' => $this->beginBody,
-            'endBody' => $this->endBody
+            'title' => $this->title
         ]);
     }
 
