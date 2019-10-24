@@ -1,10 +1,11 @@
 <!-- Post Content -->
 <article>
+<?php
+/*
 
 <?php if($title):?><h1 class="section-heading"><?= $title;?></h1><?php endif;?>
-
-<?= $content;?>
-
+*/
+?>
+<?= $text;?>
 <?php if($created):?><p><small><?= $created;?></small></p><?php endif;?>
-
 </article>

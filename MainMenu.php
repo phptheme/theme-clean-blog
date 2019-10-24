@@ -2,28 +2,13 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class MainMenu extends \PhpTheme\Core\Widget
+class MainMenu extends \PhpTheme\Html\Menu
 {
 
-	public $title;
+    const MENU_ITEM = MainMenuItem::class;
 
-	public $items = [];
+    public $tag = 'ul';
 
-    public $homeUrl;
-
-    public $toggleNavigationLabel = 'Toggle navigation';
-
-    public $menuLabel = 'Menu';
-
-	public function run()
-	{
-		return $this->render('main-menu', [
-			'items' => $this->items,
-			'title' => $this->title,
-            'homeUrl' => $this->homeUrl,
-            'menuLabel' => $this->menuLabel,
-            'toggleNavigationLabel' => $this->toggleNavigationLabel
-		]);
-	}
+    public $attributes = ['class' => 'navbar-nav ml-auto'];
 
 }

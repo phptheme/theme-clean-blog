@@ -1,9 +1,9 @@
 <!-- Page Content -->
-
 <article>
-
-<?php if($title):?><h1><?= $title;?></h1><?php endif;?>
-
+<?php
+/*
+<?php if($title):?><h1 class="section-heading"><?= $title;?></h1><?php endif;?>
+*/
+?>
 <?= $text;?>
-
 </article>

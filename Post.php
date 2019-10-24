@@ -5,7 +5,7 @@ namespace PhpTheme\CleanBlogTheme;
 class Post extends \PhpTheme\Core\Widget
 {
 
-	public $content;
+	public $text;
 
 	public $title;
 
@@ -14,7 +14,7 @@ class Post extends \PhpTheme\Core\Widget
 	public function run()
 	{
 		return $this->render('post', [
-			'content' => $this->content,
+			'text' => $this->text,
 			'title' => $this->title,
 			'created' => $this->created
 		]);

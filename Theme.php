@@ -11,12 +11,6 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     const CONTACT_FORM = ContactForm::class;
 
-    const FOOTER = Footer::class;
-
-    const FOOTER_BUTTON = FooterButton::class;
-
-    const HEADER = Header::class;
-
     const POST_HEADER = PostHeader::class;
 
     const LAYOUT = Layout::class;
@@ -25,8 +19,6 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     const MAIN_MENU = MainMenu::class;
 
-    const MAIN_MENU_ITEM = MainMenuItem::class;
-
     const PAGE = Page::class;
 
     const POST = Post::class;
@@ -34,6 +26,8 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
     const POSTS = Posts::class;
 
     const POSTS_ITEM = PostsItem::class;
+
+    const SOCIAL_MENU = SocialMenu::class;
 
     protected $_layout;
 
@@ -54,35 +48,10 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
         return $this->widget(static::CONTACT_FORM, $params);
     }    
 
-    public function footer(array $params = [])
-    {
-        return $this->widget(static::FOOTER, $params);
-    }    
-
-    public function footerButton(array $params = [])
-    {
-        return $this->widget(static::FOOTER_BUTTON, $params);
-    }
-
-    public function header(array $params = [])
-    {
-        return $this->widget(static::HEADER, $params);
-    }
-
     public function postHeader(array $params = [])
     {
         return $this->widget(static::POST_HEADER, $params);
     }
-
-    public function mainMenu(array $params = [])
-    {
-        return $this->widget(static::MAIN_MENU, $params);
-    }
-
-    public function mainMenuItem(array $params = [])
-    {
-        return $this->widget(static::MAIN_MENU_ITEM, $params);
-    }    
 
     public function page(array $params = [])
     {
@@ -124,6 +93,20 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
     public function actionMenu(array $params = [])
     {
         return ''; // not implemented
+    }
+
+    public function mainMenu(array $params = [])
+    {
+        $class = static::MAIN_MENU;
+
+        return $class::factory($params)->render();
+    }
+
+    public function socialMenu(array $params = [])
+    {
+        $class = static::SOCIAL_MENU;
+
+        return $class::factory($params)->render();
     }
 
 }

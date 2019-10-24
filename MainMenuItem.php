@@ -2,28 +2,15 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class MainMenuItem extends \PhpTheme\Core\Widget
+class MainMenuItem extends \PhpTheme\Html\MenuItem
 {
 
-	public $url;
+    public $attributes = [
+        'class' => 'nav-item'
+    ];
 
-	public $label;
-
-	public $options = [];
-
-	public function run()
-	{
-		$options = $this->options;
-
-		$options['class'] = 'nav-link';
-
-		$options['href'] = $this->url;
-
-		return $this->render('main-menu-item', [
-			'url' => $this->url,
-			'label' => $this->label,
-			'options' => $options 
-		]);
-	}
+    public $linkAttributes = [
+        'class' => 'nav-link'
+    ];
 
 }
