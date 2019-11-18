@@ -11,7 +11,7 @@ class Post extends \PhpTheme\Core\Widget
 
 	public $created;
 
-	public function run()
+	public function toString() : string
 	{
 		return $this->render('post', [
 			'text' => $this->text,

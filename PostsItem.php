@@ -13,7 +13,7 @@ class PostsItem extends \PhpTheme\Core\Widget
 
 	public $description;
 
-	public function run()
+	public function toString() : string
 	{
 		return $this->render('posts-item', [
 			'created' => $this->created,

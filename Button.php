@@ -11,7 +11,7 @@ class Button extends \PhpTheme\Core\Widget
 
     public $align = 'left';
 
-	public function run()
+	public function toString() : string
 	{
         $alignClass = '';
 

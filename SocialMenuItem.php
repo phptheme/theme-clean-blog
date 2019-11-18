@@ -13,11 +13,11 @@ class SocialMenuItem extends \PhpTheme\Html\MenuItem
         'class' => 'nav-item'
     ];
 
-    public function render()
+    public function toString() : string
     {
         $this->linkAttributes['title'] = $this->label;
 
-        return parent::render();
+        return parent::toString();
     }
 
 }

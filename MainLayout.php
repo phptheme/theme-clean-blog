@@ -33,7 +33,7 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $description;
 
-    public function run()
+    public function toString() : string
     {
         $copyright = strtr($this->copyright, ['{year}' => date('Y')]);
 

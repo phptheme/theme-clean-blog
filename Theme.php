@@ -97,16 +97,12 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
 
     public function mainMenu(array $params = [])
     {
-        $class = static::MAIN_MENU;
-
-        return $class::factory($params)->render();
+        return $this->widget(static::MAIN_MENU, $params);
     }
 
     public function socialMenu(array $params = [])
     {
-        $class = static::SOCIAL_MENU;
-
-        return $class::factory($params)->render();
+        return $this->widget(static::SOCIAL_MENU, $params);
     }
 
 }

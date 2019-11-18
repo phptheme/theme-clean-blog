@@ -11,7 +11,7 @@ class Layout extends \PhpTheme\Core\Widget
 
     public $lang = 'en';
 
-	public function run()
+	public function toString() : string
 	{
 		return $this->render('layout', [
 			'content' => $this->content,

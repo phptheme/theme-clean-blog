@@ -24,7 +24,7 @@ class ContactForm extends \PhpTheme\Core\Widget
 
     public $content;
 
-	public function run()
+	public function toString() : string
 	{
 		return $this->render('contact-form', [
             'content' => $this->content,

@@ -13,7 +13,7 @@ class InputContainer extends \PhpTheme\Core\Widget
 
     public $labelOptions = [];
 
-	public function run()
+	public function toString() : string
 	{
 		return $this->render('input-container' , [
             'content' => $this->content,

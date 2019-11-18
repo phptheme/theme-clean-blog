@@ -9,7 +9,7 @@ class Page extends \PhpTheme\Core\Widget
 
     public $title;
 
-	public function run()
+	public function toString() : string
 	{
 		return $this->render('page', [
 			'text' => $this->text,
