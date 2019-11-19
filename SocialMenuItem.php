@@ -10,8 +10,11 @@ class SocialMenuItem extends \PhpTheme\Html\MenuItem
     ];
 
     public $attributes = [
-        'class' => 'nav-item'
+        'class' => 'list-inline-item'
     ];
+
+    public $iconTemplate = '<span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>'
+        . '<i class="{icon}"></i></span>';
 
     public function toString() : string
     {
