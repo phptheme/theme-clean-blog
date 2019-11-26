@@ -33,6 +33,22 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $description;
 
+    public $accountMenu = [];
+
+    public $accountMenuOptions = [];
+
+    public $userMenu = [];
+
+    public $userMenuOptions = [];
+
+    public $accountLabel = 'Account';
+
+    public $successMessages = [];
+
+    public $errorMessages = [];
+
+    public $infoMessages = [];
+
     public function toString() : string
     {
         $copyright = strtr($this->copyright, ['{year}' => date('Y')]);
@@ -46,6 +62,12 @@ class MainLayout extends \PhpTheme\Core\Widget
         $options = $this->mainMenuOptions;
 
         $options['items'] = $this->mainMenu;
+
+        $options = $this->mainMenuOptions;
+
+        $options['items'] = $this->mainMenu;
+
+        $options['items'] = array_merge_recursive($options['items'], $this->accountMenu);
 
         $mainMenu = $this->theme->mainMenu($options);
 
@@ -68,7 +90,10 @@ class MainLayout extends \PhpTheme\Core\Widget
             'menuLabel' => $this->menuLabel,
             'baseUrl' => $this->baseUrl,
             'header' => $this->header,
-            'description' => $this->description
+            'description' => $this->description,
+            'errorMessages' => $this->errorMessages,
+            'infoMessages' => $this->infoMessages,
+            'successMessages' => $this->successMessages
         ]);
     }
 

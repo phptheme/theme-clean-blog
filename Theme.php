@@ -2,6 +2,9 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
+use PhpTheme\Bootstrap4\Menu as UserMenu;
+use PhpTheme\Bootstrap4\Menu as ActionMenu;
+
 class Theme extends \PhpTheme\Bootstrap4\Theme
 {
 
@@ -28,6 +31,10 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
     const POSTS_ITEM = PostsItem::class;
 
     const SOCIAL_MENU = SocialMenu::class;
+
+    const ACTION_MENU = ActionMenu::class;
+
+    const USER_MENU = UserMenu::class;
 
     protected $_layout;
 
@@ -92,7 +99,12 @@ class Theme extends \PhpTheme\Bootstrap4\Theme
  
     public function actionMenu(array $params = [])
     {
-        return ''; // not implemented
+        return $this->widget(static::ACTION_MENU, $params);
+    }
+
+    public function userMenu(array $params = [])
+    {
+        return $this->widget(static::USER_MENU, $params);
     }
 
     public function mainMenu(array $params = [])
