@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class Page extends \PhpTheme\Core\Widget
+class Page extends \PhpTheme\Core\ThemeWidget
 {
 
 	public $text;

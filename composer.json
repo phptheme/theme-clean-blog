@@ -1,8 +1,7 @@
 {
     "name": "phptheme/theme-clean-blog",
     "require": {
-        "phptheme/core": "dev-master",
-        "phptheme/bootstrap4": "dev-master" 
+        "phptheme/bootstrap4": "*" 
     },
     "autoload": {
         "psr-4": {

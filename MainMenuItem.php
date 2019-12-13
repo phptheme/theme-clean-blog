@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class MainMenuItem extends \PhpTheme\Html\MenuItem
+class MainMenuItem extends \PhpTheme\Bootstrap4\MenuItem
 {
 
     public $attributes = [

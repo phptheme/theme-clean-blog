@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class MainMenu extends \PhpTheme\Html\Menu
+class MainMenu extends \PhpTheme\Bootstrap4\Menu
 {
 
     const MENU_ITEM = MainMenuItem::class;

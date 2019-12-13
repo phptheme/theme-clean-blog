@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class SocialMenuItem extends \PhpTheme\Html\MenuItem
+class SocialMenuItem extends \PhpTheme\Bootstrap4\MenuItem
 {
 
     public $linkAttributes = [

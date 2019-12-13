@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class Button extends \PhpTheme\Core\Widget
+class Button extends \PhpTheme\Core\ThemeWidget
 {
 
 	public $url = '#';

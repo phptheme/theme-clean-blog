@@ -2,9 +2,9 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-use PhpTheme\Helpers\Html;
+use PhpTheme\Html\HtmlHelper;
 
-class ContactForm extends \PhpTheme\Core\Widget
+class ContactForm extends \PhpTheme\Core\ThemeWidget
 {
 
 	public $url;
@@ -31,7 +31,7 @@ class ContactForm extends \PhpTheme\Core\Widget
 			'url' => $this->url,
 			'submitLabel' => $this->submitLabel,
 			'message' => $this->message,
-            'formOptions' => Html::mergeOptions(
+            'formOptions' => HtmlHelper::mergeOptions(
                 $this->defaultFormOptions, 
                 $this->formOptions,
                 [

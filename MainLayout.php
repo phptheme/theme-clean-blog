@@ -2,7 +2,7 @@
 
 namespace PhpTheme\CleanBlogTheme;
 
-class MainLayout extends \PhpTheme\Core\Widget
+class MainLayout extends \PhpTheme\Core\ThemeWidget
 {
     
     public $content;
