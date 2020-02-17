@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTheme\CleanBlogTheme;
+namespace PhpTheme\Themes\CleanBlog;
 
 class Post extends \PhpTheme\Core\ThemeWidget
 {

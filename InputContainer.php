@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTheme\CleanBlogTheme;
+namespace PhpTheme\Themes\CleanBlog;
 
 class InputContainer extends \PhpTheme\Core\ThemeWidget
 {

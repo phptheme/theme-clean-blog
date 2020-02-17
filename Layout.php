@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTheme\CleanBlogTheme;
+namespace PhpTheme\Themes\CleanBlog;
 
 class Layout extends \PhpTheme\Core\ThemeWidget
 {

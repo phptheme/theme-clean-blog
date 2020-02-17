@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpTheme\CleanBlogTheme;
+namespace PhpTheme\Themes\CleanBlog;
 
 class MainMenu extends \PhpTheme\Bootstrap4\Menu
 {

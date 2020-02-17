@@ -1,11 +1,11 @@
 {
     "name": "phptheme/theme-clean-blog",
     "require": {
-        "phptheme/bootstrap4": "*" 
+        "phptheme/theme-bootstrap4": "*" 
     },
     "autoload": {
         "psr-4": {
-            "PhpTheme\\CleanBlogTheme\\": ""
+            "PhpTheme\\Themes\CleanBlog\\": ""
         }
     }
 }

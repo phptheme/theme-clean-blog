@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpTheme\CleanBlogTheme;
+namespace PhpTheme\Themes\CleanBlog;
 
-class Theme extends \PhpTheme\Bootstrap4\Theme
+class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
 {
 
     const INPUT_CONTAINER = InputContainer::class;
