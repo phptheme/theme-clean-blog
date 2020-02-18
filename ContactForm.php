@@ -4,7 +4,7 @@ namespace PhpTheme\Themes\CleanBlog;
 
 use PhpTheme\Html\HtmlHelper;
 
-class ContactForm extends \PhpTheme\Core\ThemeWidget
+class ContactForm extends \PhpTheme\Core\Widget
 {
 
 	public $url;

@@ -2,8 +2,10 @@
 
 namespace PhpTheme\Themes\CleanBlog;
 
-class Layout extends \PhpTheme\Core\ThemeWidget
+class Layout extends \PhpTheme\Core\Widget
 {
+
+    public $theme;
 	
 	public $content;
 	

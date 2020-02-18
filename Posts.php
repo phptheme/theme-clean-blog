@@ -2,7 +2,7 @@
 
 namespace PhpTheme\Themes\CleanBlog;
 
-class Posts extends \PhpTheme\Core\ThemeWidget
+class Posts extends \PhpTheme\Core\Widget
 {
 
 	public $items = [];

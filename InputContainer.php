@@ -2,7 +2,7 @@
 
 namespace PhpTheme\Themes\CleanBlog;
 
-class InputContainer extends \PhpTheme\Core\ThemeWidget
+class InputContainer extends \PhpTheme\Core\Widget
 {
     
     public $error;

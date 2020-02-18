@@ -2,7 +2,7 @@
 
 namespace PhpTheme\Themes\CleanBlog;
 
-class PostsItem extends \PhpTheme\Core\ThemeWidget
+class PostsItem extends \PhpTheme\Core\Widget
 {
 
 	public $created;
