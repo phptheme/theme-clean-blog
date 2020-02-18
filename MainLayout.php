@@ -61,24 +61,23 @@ class MainLayout extends \PhpTheme\Core\Widget
 
         $socialMenu = $this->theme->socialMenu($options);
 
-        $options = $this->mainMenuOptions;
-
-        $options['items'] = $this->mainMenu;
-
-        $options = $this->mainMenuOptions;
-
-        $options['items'] = $this->mainMenu;
-
-        $options['items'] = array_merge_recursive($options['items'], $this->accountMenu);
-
-        $mainMenu = $this->theme->mainMenu($options);
-
         $backgroundImage = $this->backgroundImage;
 
         if (!$backgroundImage)
         {
             $backgroundImage = $this->theme->baseUrl . '/img/home-bg.jpg';
         }
+
+        $mainMenuOptions = $this->mainMenu;
+
+        if (!empty($this->accountMenu['items']))
+        {
+            $mainMenuOptions = array_merge_recursive($mainMenuOptions, ['items' => $this->accountMenu['items']]);
+        }
+
+        $mainMenu = $this->theme->mainMenu($mainMenuOptions);
+
+        $socialMenu = $this->theme->socialMenu($this->socialMenu);
 
         return $this->render('main-layout', [
             'backgroundImage' => $backgroundImage,
