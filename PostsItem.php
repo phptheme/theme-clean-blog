@@ -5,6 +5,8 @@ namespace PhpTheme\Themes\CleanBlog;
 class PostsItem extends \PhpTheme\Core\Widget
 {
 
+    public $theme;
+
 	public $created;
 
 	public $url;

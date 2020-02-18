@@ -60,17 +60,17 @@ class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
 
     public function post(array $params = [])
     {
-        return $this->widget(static::POST, $params);
+        return $this->widget(static::POST, array_merge($params, ['theme' => $this]));
     }    
 
     public function posts(array $params = [])
     {
-        return $this->widget(static::POSTS, $params);
+        return $this->widget(static::POSTS, array_merge($params, ['theme' => $this]));
     }
 
     public function postsItem(array $params = [])
     {
-        return $this->widget(static::POSTS_ITEM, $params);
+        return $this->widget(static::POSTS_ITEM, array_merge($params, ['theme' => $this]));
     }    
 
     public function beginLayout(array $params = [])
