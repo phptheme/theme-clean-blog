@@ -21,8 +21,6 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $title = 'Clean Blog by Start Bootstrap';
 
-    public $copyright = 'Copyright &copy; My Company {year}';
-
     public $siteName = 'My Site';
 
     public $backgroundImage;
@@ -53,10 +51,10 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $infoMessages = [];
 
+    public $copyright;
+
     public function toString() : string
     {
-        $copyright = strtr($this->copyright, ['{year}' => date('Y')]);
-
         $backgroundImage = $this->backgroundImage;
 
         if (!$backgroundImage)
@@ -88,7 +86,7 @@ class MainLayout extends \PhpTheme\Core\Widget
             'title' => $this->title,
             'mainMenu' => $mainMenu,
             'socialMenu' => $socialMenu,
-            'copyright' => $copyright,
+            'copyright' => $this->theme->getCopyright($this->copyright),
             'siteName' => $this->siteName,
             'toggleNavigationLabel' => $this->toggleNavigationLabel,
             'menuLabel' => $this->menuLabel,
