@@ -6,6 +6,8 @@ class MainLayout extends \PhpTheme\Core\Widget
 {
 
     public $theme;
+
+    public $layout = [];
     
     public $content;
     
@@ -55,12 +57,6 @@ class MainLayout extends \PhpTheme\Core\Widget
     {
         $copyright = strtr($this->copyright, ['{year}' => date('Y')]);
 
-        $options = $this->socialMenuOptions;
-
-        $options['items'] = $this->socialMenu;
-
-        $socialMenu = $this->theme->socialMenu($options);
-
         $backgroundImage = $this->backgroundImage;
 
         if (!$backgroundImage)
@@ -68,16 +64,23 @@ class MainLayout extends \PhpTheme\Core\Widget
             $backgroundImage = $this->theme->baseUrl . '/img/home-bg.jpg';
         }
 
-        $mainMenuOptions = $this->mainMenu;
+        $mainMenu = array_merge($this->mainMenuOptions, ['items' => $this->mainMenu]);
 
-        if (!empty($this->accountMenu['items']))
+        if ($this->accountMenu)
         {
-            $mainMenuOptions = array_merge_recursive($mainMenuOptions, ['items' => $this->accountMenu['items']]);
+            $mainMenu['items'] = array_merge($mainMenu['items'], $this->accountMenu);
         }
 
-        $mainMenu = $this->theme->mainMenu($mainMenuOptions);
+        $mainMenu = $this->theme->mainMenu($mainMenu);
 
-        $socialMenu = $this->theme->socialMenu($this->socialMenu);
+        $socialMenu = $this->theme->socialMenu(array_merge($this->socialMenuOptions, ['items' => $this->socialMenu]));
+
+        $layout = $this->layout;
+
+        if ($this->title)
+        {
+            $layout['title'] = $this->title;
+        }
 
         return $this->render('main-layout', [
             'backgroundImage' => $backgroundImage,
@@ -94,7 +97,8 @@ class MainLayout extends \PhpTheme\Core\Widget
             'description' => $this->description,
             'errorMessages' => $this->errorMessages,
             'infoMessages' => $this->infoMessages,
-            'successMessages' => $this->successMessages
+            'successMessages' => $this->successMessages,
+            'layout' => $layout
         ]);
     }
 
