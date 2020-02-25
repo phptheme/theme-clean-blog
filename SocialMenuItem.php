@@ -18,6 +18,11 @@ class SocialMenuItem extends \PhpTheme\Bootstrap4\MenuItem
 
     public function toString() : string
     {
+        if ($this->icon)
+        {
+            $this->icon = 'fab ' . $this->icon . ' fa-stack-1x fa-inverse';
+        }
+
         $this->linkAttributes['title'] = $this->label;
 
         return parent::toString();
