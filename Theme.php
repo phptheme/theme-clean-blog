@@ -31,8 +31,6 @@ class Theme extends \PhpTheme\Themes\Bootstrap4\Theme
 
     protected $_layout;
 
-    public $lang;
-
     public function inputContainer(array $params = [])
     {
         return $this->widget(static::INPUT_CONTAINER, $params);
