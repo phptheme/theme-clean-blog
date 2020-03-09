@@ -23,6 +23,10 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $siteName = 'My Site';
 
+    public $siteTitle;
+
+    public $siteDescription;
+
     public $backgroundImage;
 
     public $toggleNavigationLabel = 'Toggle navigation';
@@ -32,8 +36,6 @@ class MainLayout extends \PhpTheme\Core\Widget
     public $baseUrl = '/';
 
     public $header;
-
-    public $description;
 
     public $accountMenu = [];
 
@@ -92,7 +94,8 @@ class MainLayout extends \PhpTheme\Core\Widget
             'menuLabel' => $this->menuLabel,
             'baseUrl' => $this->baseUrl,
             'header' => $this->header,
-            'description' => $this->description,
+            'siteDescription' => $this->siteDescription,
+            'siteTitle' => $this->siteTitle,
             'errorMessages' => $this->errorMessages,
             'infoMessages' => $this->infoMessages,
             'successMessages' => $this->successMessages,

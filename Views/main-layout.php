@@ -18,8 +18,12 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                    <h2 class="heading"><?= $title;?></h2>
-                    <span class="subheading"><?= $description;?></span>
+                    <?php if($siteTitle):?>
+                        <h2 class="heading"><?= $siteTtitle;?></h2>
+                    <?php endif;?>
+                    <?php if($siteDescription):?>
+                        <span class="subheading"><?= $siteDescription;?></span>
+                    <?php endif;?>
                 </div>
             </div>
         </div>
@@ -47,6 +51,12 @@
                 <?= $this->theme->message(['message' => $message, 'type' => 'info']);?>
 
             <?php endforeach;?>
+
+            <?php if($title):?>
+
+                <h1><?= $title;?></h1>
+
+            <?php endif;?>
 
             <?= $content;?>
 
