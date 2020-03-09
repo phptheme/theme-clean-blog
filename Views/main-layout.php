@@ -19,7 +19,7 @@
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
                     <?php if($siteTitle):?>
-                        <h2 class="heading"><?= $siteTtitle;?></h2>
+                        <h2 class="heading"><?= $siteTitle;?></h2>
                     <?php endif;?>
                     <?php if($siteDescription):?>
                         <span class="subheading"><?= $siteDescription;?></span>
