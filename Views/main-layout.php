@@ -16,7 +16,7 @@
     <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="<?= $contentCol;?>">
                     <div class="site-heading">
                     <?php if($siteTitle):?>
                         <h2 class="heading"><?= $siteTitle;?></h2>
@@ -32,7 +32,7 @@
 <!-- Main Content -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="<?= $contentCol;?>">
             
             <?php if($title):?>
 

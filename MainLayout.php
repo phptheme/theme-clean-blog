@@ -55,6 +55,8 @@ class MainLayout extends \PhpTheme\Core\Widget
 
     public $copyright;
 
+    public $contentCol = 'col-lg-8 col-md-10 mx-auto';
+
     public function toString() : string
     {
         $backgroundImage = $this->backgroundImage;
@@ -99,7 +101,8 @@ class MainLayout extends \PhpTheme\Core\Widget
             'errorMessages' => $this->errorMessages,
             'infoMessages' => $this->infoMessages,
             'successMessages' => $this->successMessages,
-            'layout' => $layout
+            'layout' => $layout,
+            'contentCol' => $this->contentCol
         ]);
     }
 
